@@ -87,7 +87,7 @@ namespace SerializationLab
         {
             Console.WriteLine(":::Deserializing JSON file:::");
             string deserializedJsonString = File.ReadAllText(path);
-            List<Events> deseilaizedEventsList = JsonSerializer.Deserialize<List<Events>>(deserializedJsonString);
+            List<Events>? deseilaizedEventsList = JsonSerializer.Deserialize<List<Events>>(deserializedJsonString);
             if (deseilaizedEventsList != null)
             {
                 foreach (Events e in deseilaizedEventsList)
